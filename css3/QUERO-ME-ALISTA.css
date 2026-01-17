@@ -1,0 +1,281 @@
+/* Configurações Globais e Variáveis */
+:root {
+    --preto: #000000;
+    --branco: #ffffff;
+    --amarelo: #f5f9b8;
+    --amarelo-hover: #f2ec3c;
+    --azul: #b2c0ef;
+    --azul-hover: #8e8ee3;
+    --vermelho: #ebaba0;
+    --vermelho-hover: #ef9393;
+    --verde: #a4d7a7;
+    --verde-hover: #7acb81;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 140px; /* Espaço para o nav fixo não cobrir o conteúdo */
+}
+
+/* Navegação Fixa */
+nav {
+    background-color: var(--preto);
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hamburguer {
+    display: none;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.link a {
+    color: var(--branco);
+    font-size: clamp(24px, 5vw, 40px);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+    list-style: none;
+}
+
+.sub li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.sub li a:hover {
+    color: greenyellow;
+}
+/* ================================================= */
+                /* BLOCO DE CARDS */
+/* ================================================= */
+
+.bloco {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bloco h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: clamp(22px, 4vw, 36px);
+    text-transform: uppercase;
+}
+
+/* GRID DOS BLOCOS */
+.blocoTit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no PC */
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+/* BLOCOS (TODOS IGUAIS, MUDA SÓ A COR) */
+.blocox,
+.blocot,
+.blocov,
+.blocou {
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* TEXTO MENOR */
+.blocoTit p {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+/* HOVER PADRÃO */
+.blocox:hover,
+.blocot:hover,
+.blocov:hover,
+.blocou:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CORES */
+.blocox {
+    background-color: var(--amarelo);
+}
+.blocox:hover {
+    background-color: var(--amarelo-hover);
+}
+
+.blocot {
+    background-color: var(--azul);
+}
+.blocot:hover {
+    background-color: var(--azul-hover);
+}
+
+.blocov {
+    background-color: var(--vermelho);
+}
+.blocov:hover {
+    background-color: var(--vermelho-hover);
+}
+
+.blocou {
+    background-color: var(--verde);
+}
+.blocou:hover {
+    background-color: var(--verde-hover);
+}
+
+@media (max-width: 768px) {
+    .blocoTit {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+
+    .blocox,
+    .blocot,
+    .blocov,
+    .blocou {
+        height: 140px;
+        font-size: 20px;
+    }
+}
+/* Rodapé (Footer) */
+.nos {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.lado-esquerdo h1 { font-size: 30px; }
+.lado-esquerdo h5 { color: #888; }
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.su {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.su a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 850px) {
+
+
+    nav{
+        height: auto;
+    }
+
+    .link{
+        text-align: center;
+        padding: 20px;
+    }
+    .link a{
+        font-size: 27px;
+        margin-left: 35px;
+
+    }
+
+    .hamburguer{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .sub{
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        margin: 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+
+    .sub.ativo{
+        display: flex;
+    }
+    .nos {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .lado-direito { 
+        align-items: center; 
+    }
+    
+    .su {
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALISTAMENTO MILITAR ONLINE</title>
+    <link rel="stylesheet" href="../SUB-PAGINAS.CSS/ALISTAMENTO-FEMININO.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container" id="cont">
+            <button id="btnMenu" class="hamburguer">☰</button>
+            
+            <div class="link">
+                <a href="../html3/PAGINA PRINCIPAL.html">ALISTAMENTO ONLINE</a>
+            </div>
+
+            <ul class="sub" id="menuLinks">
+                <li><a href="https://www.facebook.com/exercito">facebook</a></li>
+                <li><a href="https://www.instagram.com/exercito_oficial">instagram</a></li>
+                <li><a href="https://www.linkedin.com/company/exercito/">linkedin</a></li>
+                <li><a href="https://www.youtube.com/user/CCSE1982">youtube</a></li>
+                <li><a href="../html3/SERVIÇO.html">serviços</a></li>
+                <li><a href="../html3/PERGUNTAS.HTML">perguntas frequentes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="titulo">INFORMAÇÕES INICIAIS</h1>
+
+        <form class="alistamento-feminino">
+            <div class="card-branco">
+                <label for="nascimento">Data de nascimento</label>
+                <div class="linha-data">
+                    <input type="number" id="nascimento" placeholder="AAAA" required>
+                    <button type="button" class="btn-verificar" id="btn-verificar">VERIFICAR</button>
+                    <p id="mensagem" class="mensagem"></p>
+                </div>
+
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" required>
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Nome completo" required>
+
+                <label for="mae">Mãe</label>
+                <input type="text" id="mae" placeholder="Nome da mãe" required>
+
+                <label>Município de Residência</label>
+                <div class="linha-select" id="oi">
+                    <select id="uf" style="flex: 1;">
+                        <option disabled selected>- UF -</option>
+                        <option value="AC">AC</option>
+                          <option value="AL">AL</option>
+                          <option value="AP">AP</option>
+                          <option value="AM">AM</option>
+                          <option value="BA">BA</option>
+                          <option value="CE">CE</option>
+                          <option value="DF">DF</option>
+                          <option value="ES">ES</option>
+                          <option value="GO">GO</option>
+                          <option value="MA">MA</option>
+                          <option value="MT">MT</option>
+                          <option value="MS">MS</option>
+                          <option value="MG">MG</option>
+                          <option value="PA">PA</option>
+                          <option value="PB">PB</option>
+                          <option value="PR">PR</option>
+                          <option value="PE">PE</option>
+                          <option value="PI">PI</option>
+                          <option value="RJ">RJ</option>
+                          <option value="RN">RN</option>
+                          <option value="RS">RS</option>
+                          <option value="RO">RO</option>
+                          <option value="RR">RR</option>
+                          <option value="SC">SC</option>
+                          <option value="SP">SP</option>
+                          <option value="SE">SE</option>
+                          <option value="TO">TO</option>
+
+                    </select>
+                    <select style="flex: 2;" id="municipio">
+                        <option disabled selected>Selecione o município</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-avancar" id="avancar">AVANÇAR ➜</button>
+        </form>
+    </main>
+
+    <div class="nos">
+        <div class="lado-esquerdo">
+            <h5>©2025 KAIKE</h5>
+            <h1>SERMILMOB</h1>
+        </div>
+
+        <div class="lado-direito">
+            <h4>Diretoria de Serviço Militar | Direitos Reservados</h4>
+            <ul class="su">
+                <li>
+                    <a href="https://www.facebook.com/exercito">
+                        <i class="fa-brands fa-facebook-f"></i> facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/exercito_oficial">
+                        <i class="fa-brands fa-instagram"></i> instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/exercito/">
+                        <i class="fa-brands fa-linkedin-in"></i> linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/CCSE1982">
+                        <i class="fa-brands fa-youtube"></i> youtube
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<script src="../SUB-PAGINA.JS/ALISTAMENTO-FEMININO.JS"></script>
+<script src="../SUB-PAGINA-MUNICIPIOS.JS/SP.JS"></script>
+</body>
+</html>

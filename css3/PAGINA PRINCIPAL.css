@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("../imagens3/exercitos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 130px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column; /* título em cima */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hamburguer{
+  display: none;
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.link a{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.sub{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sub li{
+    list-style: none;
+}
+
+.sub li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.sub li a:hover{
+    color: greenyellow;
+}
+
+.meio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 130px);
+}
+
+.meio h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+.meio2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meio2 a{
+    width: 260px;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.6s, color 0.6s;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+.meio2 a:hover{
+    background-position: bottom;
+    color: white;
+}
+@media (max-width: 768px){
+
+    nav{
+        height: auto;
+        padding: 0;
+        position: relative;
+    }
+
+    .link{
+        text-align: center;
+        padding: 20px;
+    }
+    .link a{
+        font-size: 27px;
+        margin-left: 35px;
+
+    }
+
+    .hamburguer{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .sub{
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sub.ativo{
+        display: flex;
+    }
+
+    .sub li{
+        text-align: center;
+    }
+}

@@ -1,0 +1,258 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== NAV ===== */
+nav{
+    background-color: #000;
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hamburguer{
+    display: none;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.link a{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.sub{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sub li{
+    list-style: none;
+}
+
+.sub li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.sub li a:hover{
+    color: greenyellow;
+}
+
+header{
+    max-width: 900px;
+    margin: 180px auto 60px auto; /* espaço para o menu fixo */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+header h1{
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+header p{
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* CAIXA DE TEXTO */
+.deficiecia{
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 20px; /* valor correto */
+}
+
+.deficiecia h5{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+.nos{
+    background-color: black;
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* ESQUERDA */
+.lado-esquerdo{
+    display: flex;
+    align-items: center;
+    gap: 180px;
+    margin-left: 10%;
+}
+
+.lado-esquerdo h1,
+.lado-esquerdo h5{
+    color: #fff;
+    margin: 0;
+}
+
+.lado-esquerdo h1{
+    font-size: 40px;
+}
+
+/* DIREITA */
+.lado-direito{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-right: 10%;
+}
+
+.lado-direito h4{
+    color: #fff;
+    margin: 0;
+    text-align: right;
+}
+
+/* LINKS */
+.su{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.su a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.su a:hover{
+    text-decoration: underline;
+}
+
+.su i{
+    font-size: 16px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px){
+
+    nav{
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .link{
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .link a{
+        font-size: 29px;
+    }
+
+    .hamburguer{
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 15px;
+    }
+
+    .sub{
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+    }
+
+    .sub.ativo{
+        display: flex;
+    }
+
+    .sub li{
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* HEADER MOBILE */
+    header{
+        margin-top: 160px;
+    }
+
+    header h1{
+        font-size: 22px;
+    }
+
+    header p{
+        font-size: 16px;
+    }
+
+    .deficiecia h5{
+        font-size: 18px;
+    }
+
+    /* FOOTER MOBILE */
+    .nos{
+        height: auto;
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 15px;
+        position: relative;
+    }
+
+    .lado-esquerdo,
+    .lado-direito{
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .lado-esquerdo{
+        gap: 5px;
+    }
+
+    .lado-esquerdo h1{
+        font-size: 28px;
+    }
+
+    .lado-esquerdo h5{
+        font-size: 14px;
+    }
+
+    .lado-direito h4{
+        font-size: 14px;
+    }
+}

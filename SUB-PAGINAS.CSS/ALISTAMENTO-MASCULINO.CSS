@@ -1,0 +1,265 @@
+:root {
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+    --verde-exercito: #5bb58a;
+    --amarelo: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cinza-claro);
+    /* Espaço para o nav fixo */
+    padding-top: 120px; 
+}
+
+/* 1. NAVEGAÇÃO FIXA (TOPO) */
+nav {
+    background-color: var(--preto);
+    width: 100%;
+    min-height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburguer {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+}
+
+.link a {
+    color: var(--branco);
+    font-size: clamp(22px, 4vw, 32px);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sub {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.sub li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sub li a:hover {
+    color: greenyellow;
+}
+
+/* 2. CONTEÚDO PRINCIPAL */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 140px; /* Padding bottom para não bater no footer fixo */
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #212529;
+    font-weight: bold;
+}
+
+.alistamento-feminino {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alistamento-feminino label {
+    font-size: 14px;
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: -8px;
+}
+
+.alistamento-feminino input,
+.alistamento-feminino select {
+    width: 100%;
+    padding: 12px;
+    background: #fdfdfd;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.linha-data, .linha-select {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-verificar {
+    background: var(--amarelo);
+    border: none;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-avancar {
+    width: 220px;
+    padding: 15px;
+    background: var(--verde-exercito);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-avancar:hover {
+    background: #4a9471;
+    transform: translateY(-2px);
+}
+
+/* 3. FOOTER (FIXO NO DESKTOP) */
+.nos {
+    background-color: var(--preto);
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    border-top: 1px solid #333;
+}
+
+.lado-esquerdo {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.lado-esquerdo h1 { font-size: 35px; color: white; }
+.lado-esquerdo h5 { font-size: 12px; color: #ccc; font-weight: normal; }
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.lado-direito h4 { color: white; font-size: 13px; font-weight: normal; }
+
+.su {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.su a {
+    color: #7b42f5; /* Cor roxa dos links */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mensagem{
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* 4. RESPONSIVIDADE (MOBILE) */
+@media (max-width: 850px) {
+    body { padding-top: 80px; }
+
+    .hamburguer { display: block; }
+
+    .sub {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: var(--preto);
+        padding: 20px 0;
+    }
+
+    .sub.ativo { display: flex; }
+
+    main {
+        padding: 20px 15px 40px; /* Reduzi o padding bottom no mobile */
+    }
+
+    .nos {
+        position: relative; /* FUNDAMENTAL: Footer para de ser fixo no mobile */
+        height: auto;
+        flex-direction: column;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .lado-esquerdo {
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 0;
+    }
+
+    .lado-direito {
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .su {
+        justify-content: center;
+    }
+
+    .linha-data, .linha-select {
+        flex-direction: column;
+    }
+    
+    .btn-verificar {
+        padding: 12px;
+    }
+}
