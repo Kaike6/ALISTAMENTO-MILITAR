@@ -98,6 +98,10 @@ header h5{
     background-color: black; 
     color: white;
 }
+.botao button a{
+    text-decoration: none;
+    color: white;
+}
 
 .nos{
   background-color: black;
