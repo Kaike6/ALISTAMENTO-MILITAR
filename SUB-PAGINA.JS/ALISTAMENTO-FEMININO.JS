@@ -53,8 +53,7 @@ cpf.addEventListener("input", () => {
     valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
     cpf.value = valor;
-
-
+});
 
 /* ===== MENU HAMBÚRGUER ===== */
 const btnHamburguer = document.querySelector('.hamburguer');
@@ -63,7 +62,8 @@ const menuSub = document.querySelector('.sub');
 btnHamburguer.addEventListener('click', () => {
     menuSub.classList.toggle('ativo');
 });
-});
+
+/* ===== VALIDAÇÃO FORMULÁRIO ===== */
 if(avancar != null){
 avancar.addEventListener("click", (e) => {
     if (cpf.value === "" || nome.value === "" || mae.value === "") {

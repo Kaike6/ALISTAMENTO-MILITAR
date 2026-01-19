@@ -54,7 +54,7 @@ cpf.addEventListener("input", () => {
 
     cpf.value = valor;
 
-
+});
 
 /* ===== MENU HAMBÚRGUER ===== */
 const btnHamburguer = document.querySelector('.hamburguer');
@@ -63,7 +63,7 @@ const menuSub = document.querySelector('.sub');
 btnHamburguer.addEventListener('click', () => {
     menuSub.classList.toggle('ativo');
 });
-});
+
 if(avancar != null){
 avancar.addEventListener("click", (e) => {
     if (cpf.value === "" || nome.value === "" || mae.value === "") {
